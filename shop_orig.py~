@@ -51,7 +51,7 @@ def is_valid_order(order):
     Check if an order exists in the shop.
     """
     # your code goes here!
-    if order in original_flavors or order in signature_flavors or order in menu:
+    if order in (original_flavors or signature_flavors or menu):
         return True
     else:
         return False
@@ -63,15 +63,6 @@ def get_order():
     """
     order_list = []
     # your code goes here!
-    user_input = input("What would you like to order? \n")
-
-    while not user_input.lower() == "exit":
-        if is_valid_order(user_input):
-            order_list.append(user_input)
-        else:
-            print("this is not a valid order, type in something else: ")
-        user_input = input()
-
 
     return order_list
 

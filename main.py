@@ -1,3 +1,4 @@
+#shop_orig is the other file in the directory
 from shop import (
     print_menu,
     print_originals,
